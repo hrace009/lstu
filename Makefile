@@ -30,7 +30,7 @@ cover:
 	PERL5OPT='-Ilib/' HARNESS_PERL_SWITCHES='-MDevel::Cover' $(CARTON) cover --ignore_re '^local'
 
 test:
-	@PERL5OPT='-Ilib/' HARNESS_PERL_SWITCHES='-MDevel::Cover' $(CARTON) $(REAL_LSTU) test
+	PERL5OPT='-Ilib/' HARNESS_PERL_SWITCHES='-MDevel::Cover' $(CARTON) $(REAL_LSTU) test
 
 test-sqlite:
 	@rm -rf test1.db test1.db-journal cover_db/
