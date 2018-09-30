@@ -43,6 +43,7 @@ feature 'postgresql', 'PostgreSQL support' => sub {
     requires 'Mojolicious::Plugin::PgURLHelper';
 };
 feature 'mysql', 'MySQL support' => sub {
+    requires 'DBD::mysql', '<= 4.046';
     requires 'Mojo::mysql';
     requires 'Minion::Backend::mysql';
     requires 'Mojolicious::Plugin::PgURLHelper';
